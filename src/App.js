@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const App = () => {
 
@@ -25,6 +27,8 @@ const App = () => {
         name: playerName,
         score: score + 10
       };
+     
+
       setHighScores([...highScores, newScore]);
       setMessage(`Congratulations! You guessed the number ${secretNumber}!`);
       // setScore(score + 10);
@@ -54,26 +58,23 @@ const App = () => {
         <p class="between">Guess a number between 1 and 100</p>
         <button className="btn again" onClick={handleRestart}>Again!</button>
         <div class="number"> {answer} </div>
-
       </header>
       <main>
-        <section className='left'>
+        <section className='left'> 
+          <p className="message">{message}</p>
+          <p className="label-score">
+              💯 Score: <span className="score"> {score} </span>
+          </p>
           <form onSubmit={handleFormSubmit}>
-            {/* <input className="guess" type="number" value={guess} onChange={handleInputChange} /> */}
-            <label htmlFor="guess">Guess:</label>
-            <input type="number" id="guess" name="guess" value={guess} onChange={handleInputChange} />
+            <label htmlFor="guess">Guess:</label> 
+            <input className="guess" type="number" id="guess" name="guess" value={guess} onChange={handleInputChange} /> 
             <label htmlFor="player-name">Name:</label>
-            <input type="text" id="player-name" name="player-name" value={playerName} onChange={handleNameInputChange} />
-            {/* <button type="submit">Submit</button> */}
+            <input className="guess" type="text" id="player-name" name="player-name" value={playerName} onChange={handleNameInputChange} />
             <button  className="btn check" >Submit Guess</button>
           </form>
         </section>
         <section className='right'>
-        <p className="message">{message}</p>
-          <p className="label-score">
-            💯 Score: <span className="score"> {score} </span>
-          </p>
-          <h2 className="label-highscore">🥇 Highscore: </h2>
+          <h2 className="label-highscore">🥇 Highscores </h2>
           <table>
             <thead>
               <tr>
@@ -94,6 +95,14 @@ const App = () => {
           </table>
         </section>
       </main>
+      <div class="footer">
+        <ul class="horizontal-list">
+          <li><a href='https://aitalmeida.tech'>Portfolio</a></li>
+          <li><a href='https://github.com/Shado2107/guessmynumber'>Github</a></li>
+          <li><a href="https://paypal.me/pavelro21">Paypal me</a></li>
+          <li><a href='mailto:aitalmeida21@gmail.com'>Contact</a></li>
+        </ul>
+      </div>
     </>
   );
 };
