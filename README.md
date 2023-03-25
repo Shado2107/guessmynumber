@@ -1,6 +1,8 @@
 # Find my number
 
-Game live address: http://mynumber.aitalmeida.tech/
+## Description
+
+Game live address: `http://mynumber.aitalmeida.tech/`
 
 The game generates a number between 1 and 100 and you must guess the number.
 
@@ -15,10 +17,11 @@ If your scores decreases to '0', you will lose the game. :(
 Have Fun :)
 
 
-#Contribution
+## Contributions
 
-You can contribute to this project 
+- If you want to make a contribution, feel free to open a pull request at any time.
 
-by adding more features and make a pull request
+## Contact
 
-
+If you have any questions or issues with the project, please get in touch with me !
+`aitalmeida21@gmail.com`
