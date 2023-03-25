@@ -122,6 +122,7 @@
     position: relative;
     height: 28vh;
     border-bottom: 4px solid #eee;
+
   }
   
   main {
@@ -137,6 +138,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+   
   }
   
   .right {
@@ -181,4 +184,108 @@ li:hover {
 
 li>a{
   color: #eee;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Adjust the styles for screens smaller than 768px wide */
+  header {
+    height: 10vh;
+  }
+
+  main {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .right {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .number {
+    font-size: 3rem;
+    width: 10rem;
+    padding: 1rem 0rem;
+  }
+
+  .between {
+    font-size: 1rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .again {
+    font-size: 1.5rem;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .guess {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .guess {
+    font-size: 16px;
+    padding: 1.5rem;
+    width: 25rem;
+    margin-bottom: 2rem;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  /* Adjust the styles for screens smaller than 480px wide */
+  th,
+  td {
+    padding: 5px;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .number {
+    font-size: 2.5rem;
+    width: 8rem;
+    padding: 1rem 0rem;
+  }
+
+  .between {
+    font-size: 0.8rem;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .again {
+    font-size: 1.2rem;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
 }
